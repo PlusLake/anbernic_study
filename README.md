@@ -19,3 +19,13 @@ so the resources of this repository might be inaccurate!<br>
 
 I have no clue of how to do this 2.<br>
 If you have any ideas/links to useful resources, please create an issue on this repo!
+
+## Resource not own by me
+
+There are some scripts / source codes not own by me.<br>
+Thanks for the resource so I could compile my code and run on my machine.
+
+- linkscript (public domain)
+    - A linker script written by Jeff Frohwein
+- crt0.s (public domain)
+    - A startup routine written by Jeff Frohwein
