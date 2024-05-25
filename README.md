@@ -29,3 +29,9 @@ Thanks for the resource so I could compile my code and run on my machine.
     - A linker script written by Jeff Frohwein
 - crt0.s (public domain)
     - A startup routine written by Jeff Frohwein
+
+## Useful links
+
+- https://www.coranac.com/tonc
+- https://gist.github.com/JShorthouse/bfe49cdfad126e9163d9cb30fd3bf3c2
+- https://github.com/dag7dev/awesome-anbernic
