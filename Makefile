@@ -9,13 +9,14 @@ options := -O3 -fomit-frame-pointer -marm -mcpu=arm7tdmi
 
 CFLAGS := $(options) -std=c11 -pedantic -Wall
 
-$(bin): $(obj)
-	$(CC) -o out.elf $(obj) -Tlinkscript -nostartfiles -lm
+.PHONY: clean
+
+$(bin):
+	$(CC) -o out.elf crt0.s main.c -Tlinkscript -nostartfiles -lm
 	$(OBJCOPY) -O binary out.elf $(bin)
 	$(RM) out.elf
 	retroarch -L /usr/lib/x86_64-linux-gnu/libretro/mgba_libretro.so $(bin)
 
-.PHONY: clean
 clean:
 	rm -f $(obj) $(obj:.o=.d)
 
