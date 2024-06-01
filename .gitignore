@@ -1,2 +1,4 @@
 *.gba
 *.o
+*.class
+images.c
