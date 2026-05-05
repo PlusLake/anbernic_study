@@ -1,0 +1,22 @@
+#!/bin/sh
+# shellcheck source=/dev/null
+
+for S in "/opt/muos/script/init"/S??*; do
+	[ -e "$S" ] || continue
+	[ -f "$S" ] || continue
+    UPTIME=$(awk '{print $1}' /proc/uptime)
+    echo "[$UPTIME] Executing init script: $S" >> /opt/early_boot.log
+    
+	case "$S" in
+		*.sh)
+			(
+				trap - INT QUIT TSTP
+				set start
+				. "$S"
+			)
+			;;
+		*)
+			"$S" start
+			;;
+	esac
+done
